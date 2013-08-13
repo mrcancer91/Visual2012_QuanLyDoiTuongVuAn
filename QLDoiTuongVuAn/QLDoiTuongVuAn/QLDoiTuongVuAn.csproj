@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{48054B22-93EF-4BD1-BD5F-224B14FD2C48}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLDoiTuongVuAn</RootNamespace>
+    <AssemblyName>QLDoiTuongVuAn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bus\CanBo_Bus.cs" />
+    <Compile Include="Bus\DoiTuong_Bus.cs" />
+    <Compile Include="Bus\HoSoVuAn_Bus.cs" />
+    <Compile Include="Bus\LoaiHinhViPham_Bus.cs" />
+    <Compile Include="Entity\CanBo.cs" />
+    <Compile Include="Entity\DoiTuong.cs" />
+    <Compile Include="Entity\HoSoVuAn.cs" />
+    <Compile Include="Entity\LoaiHinhViPham.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="projectForm\DialogCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\DialogCanBo.Designer.cs">
+      <DependentUpon>DialogCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\DialogDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\DialogDoiTuong.Designer.cs">
+      <DependentUpon>DialogDoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\DialogHoSoVuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\DialogHoSoVuAn.Designer.cs">
+      <DependentUpon>DialogHoSoVuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\DialogLoaiHinhViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\DialogLoaiHinhViPham.Designer.cs">
+      <DependentUpon>DialogLoaiHinhViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\FrmCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\FrmCanBo.Designer.cs">
+      <DependentUpon>FrmCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\FrmDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\FrmDoiTuong.Designer.cs">
+      <DependentUpon>FrmDoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\FrmHoSoVuAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\FrmHoSoVuAn.Designer.cs">
+      <DependentUpon>FrmHoSoVuAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectForm\FrmLoaiHinhViPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectForm\FrmLoaiHinhViPham.Designer.cs">
+      <DependentUpon>FrmLoaiHinhViPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectReport\frmReoirtDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectReport\frmReoirtDoiTuong.Designer.cs">
+      <DependentUpon>frmReoirtDoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectReport\frmReportCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectReport\frmReportCanBo.Designer.cs">
+      <DependentUpon>frmReportCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="projectReport\frmReportHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectReport\frmReportHoSo.Designer.cs">
+      <DependentUpon>frmReportHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDoiTuongVuAnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLDoiTuongVuAnDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Util\KetNoiSQL.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\DialogCanBo.resx">
+      <DependentUpon>DialogCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\DialogDoiTuong.resx">
+      <DependentUpon>DialogDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\DialogHoSoVuAn.resx">
+      <DependentUpon>DialogHoSoVuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\DialogLoaiHinhViPham.resx">
+      <DependentUpon>DialogLoaiHinhViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\FrmCanBo.resx">
+      <DependentUpon>FrmCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\FrmDoiTuong.resx">
+      <DependentUpon>FrmDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\FrmHoSoVuAn.resx">
+      <DependentUpon>FrmHoSoVuAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectForm\FrmLoaiHinhViPham.resx">
+      <DependentUpon>FrmLoaiHinhViPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectReport\frmReoirtDoiTuong.resx">
+      <DependentUpon>frmReoirtDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectReport\frmReportCanBo.resx">
+      <DependentUpon>frmReportCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectReport\frmReportHoSo.resx">
+      <DependentUpon>frmReportHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectReport\reportHoSo.rdlc" />
+    <EmbeddedResource Include="projectReport\reportDoiTuong.rdlc" />
+    <EmbeddedResource Include="projectReport\reportCanBo.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLDoiTuongVuAnDataSet.xsc">
+      <DependentUpon>QLDoiTuongVuAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLDoiTuongVuAnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLDoiTuongVuAnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLDoiTuongVuAnDataSet.xss">
+      <DependentUpon>QLDoiTuongVuAnDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
